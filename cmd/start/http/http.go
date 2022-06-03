@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/mittacy/gin-toy-layout/bootstrap"
-	"github.com/mittacy/gin-toy-layout/middleware"
 	"github.com/mittacy/gin-toy-layout/router"
+	"github.com/mittacy/gin-toy-layout/utils/timeUtil"
 	"github.com/mittacy/gin-toy/core/log"
+	"github.com/mittacy/gin-toy/core/middleware"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"net/http"
@@ -39,7 +40,8 @@ func run(cmd *cobra.Command, args []string) {
 
 	r := gin.New()
 	// 全局中间件
-	r.Use(middleware.RequestTrace())
+	r.Use(middleware.RecoveryWithLog(log.New("request"), true))
+	r.Use(middleware.RequestTraceAndLog(log.New("request"), timeUtil.TimeFormat, true))
 
 	router.Init(r)
 
