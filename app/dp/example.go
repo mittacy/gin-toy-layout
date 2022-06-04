@@ -2,7 +2,7 @@ package dp
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mittacy/gin-toy-layout/response"
+	"github.com/mittacy/gin-toy/core/response"
 )
 
 type ExampleDp struct{}

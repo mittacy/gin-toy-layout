@@ -167,8 +167,8 @@ github.com/mattn/go-isatty v0.0.14 h1:yVuAays6BHfxijgZPzw+3Zlu5yQgKGP2/hcQbHb7S9
 github.com/mattn/go-isatty v0.0.14/go.mod h1:7GGIvUiUoEMVVmxf/4nioHXj79iQHKdU27kJ6hsGG94=
 github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyuac5Z2hdY=
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
-github.com/mittacy/gin-toy v0.0.3 h1:A4Ajw4yZtWL4HITo9Myd8Zu6RTtfkuP7qgieYbGP2OQ=
-github.com/mittacy/gin-toy v0.0.3/go.mod h1:SmXlkncm8JvSJmRSr5naaZPakcelHslIHegjiLMDcn8=
+github.com/mittacy/gin-toy v0.0.4 h1:rfEgWLQtZgohM1fUxWZnY6o9vuQK/tNRvd8FBNHywO4=
+github.com/mittacy/gin-toy v0.0.4/go.mod h1:SmXlkncm8JvSJmRSr5naaZPakcelHslIHegjiLMDcn8=
 github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
 github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd h1:TRLaZ9cD/w8PVh93nsPXa1VrQ6jlwL5oN8l14QlcNfg=
 github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=

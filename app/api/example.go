@@ -6,7 +6,7 @@ import (
 	"github.com/mittacy/gin-toy-layout/app/service"
 	"github.com/mittacy/gin-toy-layout/app/validator/exampleVdr"
 	"github.com/mittacy/gin-toy-layout/bizerr"
-	"github.com/mittacy/gin-toy-layout/response"
+	"github.com/mittacy/gin-toy/core/response"
 	"github.com/mittacy/gin-toy/core/singleton"
 )
 
