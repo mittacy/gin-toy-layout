@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/fsnotify/fsnotify v1.5.4
 	github.com/gin-gonic/gin v1.8.0
-	github.com/mittacy/gin-toy v0.0.4
+	github.com/mittacy/gin-toy v0.0.5
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.4.0
 	github.com/spf13/viper v1.12.0
@@ -36,7 +36,7 @@ require (
 	github.com/subosito/gotenv v1.3.0 // indirect
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
-	go.uber.org/multierr v1.6.0 // indirect
+	go.uber.org/multierr v1.7.0 // indirect
 	golang.org/x/crypto v0.0.0-20220411220226-7b82a4e95df4 // indirect
 	golang.org/x/net v0.0.0-20220520000938-2e3eb7b945c2 // indirect
 	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a // indirect

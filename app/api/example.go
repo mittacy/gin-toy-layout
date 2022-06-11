@@ -5,7 +5,6 @@ import (
 	"github.com/mittacy/gin-toy-layout/app/dp"
 	"github.com/mittacy/gin-toy-layout/app/service"
 	"github.com/mittacy/gin-toy-layout/app/validator/exampleVdr"
-	"github.com/mittacy/gin-toy-layout/bizerr"
 	"github.com/mittacy/gin-toy/core/response"
 	"github.com/mittacy/gin-toy/core/singleton"
 )
@@ -31,8 +30,8 @@ func (ctl *exampleApi) Get(c *gin.Context) {
 		return
 	}
 
-	if err := service.Example.Get(c); err != nil {
-		response.FailCheckBizErr(c, "查询记录错误", err, bizerr.ARecordNoExists, bizerr.BRecordNoExists)
+	if err := service.Example.Get(c, req.AId, req.BId); err != nil {
+		response.FailCheckBizErr(c, "查询记录错误", err)
 		return
 	}
 

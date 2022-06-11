@@ -12,11 +12,13 @@ func NewExample() Example {
 	return Example{}
 }
 
-func (ctl *Example) GetA() error {
+func (ctl *Example) GetA(aId int) error {
 	return nil
-	//return errors.WithStack(bizerr.ARecordNoExists)
 }
 
-func (ctl *Example) GetB() error {
-	return errors.WithStack(bizerr.BRecordNoExists)
+func (ctl *Example) GetB(id int) error {
+	if id != 1 {
+		return errors.WithStack(bizerr.BRecordNoExists)
+	}
+	return nil
 }

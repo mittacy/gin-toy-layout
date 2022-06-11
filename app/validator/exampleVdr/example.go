@@ -1,5 +1,6 @@
 package exampleVdr
 
 type GetReq struct {
-	Id int64 `form:"id" json:"id" binding:"required"`
+	AId int `form:"a_id" json:"a_id"`
+	BId int `form:"b_id" json:"b_id" binding:"required"`
 }
