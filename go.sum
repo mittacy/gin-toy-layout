@@ -169,6 +169,8 @@ github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyua
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
 github.com/mittacy/gin-toy v0.0.5 h1:u0Lh/aCZRWndfKIipjPw+LLVVuSRknjHy94oY2aiHrM=
 github.com/mittacy/gin-toy v0.0.5/go.mod h1:qxAmgtSayksf0i/bjZRzjVZz8LS798QbJW2wTxLQawY=
+github.com/mittacy/gin-toy v0.0.6 h1:ccguze/VaM9F+9uNgg4qt/DkO6vXqm/g6A1Yko72QUI=
+github.com/mittacy/gin-toy v0.0.6/go.mod h1:qxAmgtSayksf0i/bjZRzjVZz8LS798QbJW2wTxLQawY=
 github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
 github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd h1:TRLaZ9cD/w8PVh93nsPXa1VrQ6jlwL5oN8l14QlcNfg=
 github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=

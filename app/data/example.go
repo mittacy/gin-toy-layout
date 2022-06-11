@@ -6,10 +6,17 @@ import (
 )
 
 type Example struct {
+	//eMysql.EGorm
+	//eRedis.ERedis
+	//eMongo.EMongo
 }
 
 func NewExample() Example {
-	return Example{}
+	return Example{
+		//EGorm:  eMysql.EGorm{ConfName: "localhost"},
+		//ERedis: eRedis.ERedis{ConfName: "localhost", DB: 0},
+		//EMongo: eMongo.EMongo{ConfName: "localhost", Collection: "collection_name"},
+	}
 }
 
 func (ctl *Example) GetA(aId int) error {

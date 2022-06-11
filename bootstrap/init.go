@@ -2,6 +2,7 @@ package bootstrap
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/mittacy/gin-toy-layout/config"
 	"github.com/mittacy/gin-toy-layout/utils/bizUtil"
 	"github.com/mittacy/gin-toy/core/singleton"
 )
@@ -19,6 +20,11 @@ func InitDependents(path string, env string) {
 
 	// log
 	InitLog()
+
+	// database
+	config.InitMysql()
+	config.InitRedis()
+	config.InitMongo()
 
 	// 初始化单例
 	singleton.Build()
