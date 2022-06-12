@@ -12,13 +12,13 @@ import (
 var Example exampleApi
 
 type exampleApi struct {
-	dp dp.ExampleDp
+	dp dp.ExampleDP
 }
 
 func init() {
 	singleton.Register(func() {
 		Example = exampleApi{
-			dp: dp.NewExampleDp(),
+			dp: dp.NewExampleDP(),
 		}
 	})
 }
@@ -30,10 +30,11 @@ func (ctl *exampleApi) Get(c *gin.Context) {
 		return
 	}
 
-	if err := service.Example.Get(c, req.Id); err != nil {
+	example, err := service.Example.GetById(c, req.Id)
+	if err != nil {
 		response.FailCheckBizErr(c, "查询记录错误", err)
 		return
 	}
 
-	ctl.dp.Get(c, response.NilData)
+	ctl.dp.Get(c, example)
 }

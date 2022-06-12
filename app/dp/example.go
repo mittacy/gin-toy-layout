@@ -5,12 +5,12 @@ import (
 	"github.com/mittacy/gin-toy/core/response"
 )
 
-type ExampleDp struct{}
+type ExampleDP struct{}
 
-func NewExampleDp() ExampleDp {
-	return ExampleDp{}
+func NewExampleDP() ExampleDP {
+	return ExampleDP{}
 }
 
-func (ctl *ExampleDp) Get(c *gin.Context, data interface{}) {
+func (ctl *ExampleDP) Get(c *gin.Context, data interface{}) {
 	response.Success(c, data)
 }
