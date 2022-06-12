@@ -30,7 +30,7 @@ func (ctl *exampleApi) Get(c *gin.Context) {
 		return
 	}
 
-	if err := service.Example.Get(c, req.AId, req.BId); err != nil {
+	if err := service.Example.Get(c, req.Id); err != nil {
 		response.FailCheckBizErr(c, "查询记录错误", err)
 		return
 	}

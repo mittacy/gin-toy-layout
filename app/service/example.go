@@ -21,13 +21,9 @@ func init() {
 	})
 }
 
-func (ctl *exampleService) Get(c *gin.Context, aId, bId int) error {
-	if err := ctl.data.GetA(aId); err != nil {
-		return errors.WithMessage(err, "查询A记录错误")
-	}
-
-	if err := ctl.data.GetB(bId); err != nil {
-		return errors.WithMessage(err, "查询B记录错误")
+func (ctl *exampleService) Get(c *gin.Context, id int) error {
+	if _, err := ctl.data.Get(c, id); err != nil {
+		return errors.WithMessage(err, "查询记录错误")
 	}
 
 	return nil

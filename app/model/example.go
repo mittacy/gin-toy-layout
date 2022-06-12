@@ -1,6 +1,9 @@
 package model
 
-const ()
+const (
+	ExampleIsDeletedNo  = 0
+	ExampleIsDeletedYes = 1
+)
 
 type Example struct {
 }

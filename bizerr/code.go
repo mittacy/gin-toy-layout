@@ -5,9 +5,6 @@ import (
 )
 
 var (
-	// A相关错误
-	ARecordNoExists = &bizerr.BizErr{Code: 100101, Msg: "A记录不存在"}
-
-	// B相关错误
-	BRecordNoExists = &bizerr.BizErr{Code: 100201, Msg: "B记录不存在"}
+	// example相关错误
+	ExampleRecordNoExists = &bizerr.BizErr{Code: 100101, Msg: "example记录不存在"}
 )
