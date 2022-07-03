@@ -5,6 +5,6 @@ import (
 )
 
 var (
-	// example相关错误
-	ExampleRecordNoExists = &bizerr.BizErr{Code: 100101, Msg: "example记录不存在"}
+	// 用户相关错误
+	UserNoExists = &bizerr.BizErr{Code: 100101, Msg: "用户不存在"}
 )

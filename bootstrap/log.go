@@ -1,7 +1,6 @@
 package bootstrap
 
 import (
-	"github.com/gin-gonic/gin"
 	"github.com/mittacy/gin-toy-layout/utils/timeUtil"
 	"github.com/mittacy/gin-toy/core/log"
 	"github.com/spf13/viper"
@@ -12,10 +11,7 @@ func InitLog() {
 	logPath := viper.GetString("LOG_PATH")
 	logLevel := viper.GetString("LOG_LOW_LEVEL")
 	logEncoderJson := viper.GetBool("LOG_ENCODER_JSON")
-	logInConsole := false
-	if gin.Mode() == gin.DebugMode {
-		logInConsole = true
-	}
+	logInConsole := viper.GetBool("Log_In_Console")
 	globalFields := []zapcore.Field{
 		{
 			Key:    "module_name",

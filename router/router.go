@@ -13,7 +13,7 @@ func Init(r *gin.Engine) {
 	r.GET("/ping", ping)
 	r.GET("/health", ping)
 
-	r.GET("/get", api.Example.Get)
+	r.GET("/user/get", api.User.Get)
 }
 
 func ping(c *gin.Context) {

@@ -5,17 +5,18 @@ import (
 	"github.com/mittacy/gin-toy-layout/app/model"
 	"github.com/mittacy/gin-toy-layout/bizerr"
 	"github.com/spf13/viper"
+	"time"
 )
 
-type Example struct {
+type User struct {
 	//eMysql.EGorm
 	//eMongo.EMongo
 	//eRedis.ERedis
 	//client *thirdHttp.Client
 }
 
-func NewExample() Example {
-	return Example{
+func NewUser() User {
+	return User{
 		//EGorm:  eMysql.EGorm{ConfName: "localhost"},
 		//EMongo: eMongo.EMongo{ConfName: "localhost", Collection: "collection_name"},
 		//ERedis: eRedis.ERedis{ConfName: "localhost", DB: 0},
@@ -23,17 +24,25 @@ func NewExample() Example {
 	}
 }
 
-func (ctl *Example) Get(c context.Context, id int) (*model.Example, error) {
+func (ctl *User) Get(c context.Context, id int64) (*model.User, error) {
 	if id != 1 {
-		return nil, bizerr.ExampleRecordNoExists
+		return nil, bizerr.UserNoExists
 	}
 
-	return &model.Example{}, nil
+	return &model.User{
+		Id:        id,
+		Name:      "xiyangyang",
+		Age:       5,
+		IsDeleted: model.UserIsDeletedNo,
+		CreatedAt: time.Date(2022, 7, 1, 21, 1, 1, 0, time.Local),
+		UpdatedAt: time.Date(2022, 7, 3, 12, 2, 15, 0, time.Local),
+	}, nil
 }
+
 
 /*
  * 以下为查询缓存KEY方法
  */
-func (ctl *Example) cacheKeyPre() string {
-	return viper.GetString("APP_NAME") + ":example"
+func (ctl *User) cacheKeyPre() string {
+	return viper.GetString("APP_NAME") + ":user"
 }
