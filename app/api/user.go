@@ -30,11 +30,12 @@ func (ctl *userApi) Get(c *gin.Context) {
 		return
 	}
 
-	example, err := service.User.GetById(c, req.Id)
+	data, err := service.User.GetById(c, req.Id)
 	if err != nil {
 		response.FailCheckBizErr(c, "查询记录错误", err)
 		return
 	}
 
-	ctl.dp.Get(c, example)
+	res := ctl.dp.Get(c, data)
+	response.Success(c, res)
 }

@@ -5,7 +5,6 @@ import (
 	"github.com/mittacy/gin-toy-layout/app/service/smodel"
 	"github.com/mittacy/gin-toy-layout/app/validator/userVdr"
 	"github.com/mittacy/gin-toy-layout/utils/timeUtil"
-	"github.com/mittacy/gin-toy/core/response"
 )
 
 type UserDP struct{}
@@ -14,7 +13,7 @@ func NewUserDP() UserDP {
 	return UserDP{}
 }
 
-func (ctl *UserDP) Get(c *gin.Context, data *smodel.GetById) {
+func (ctl *UserDP) Get(c *gin.Context, data *smodel.GetById) map[string]interface{} {
 	user := userVdr.GetReplyUser{
 		Id:        data.User.Id,
 		Name:      data.User.Name,
@@ -23,9 +22,7 @@ func (ctl *UserDP) Get(c *gin.Context, data *smodel.GetById) {
 		UpdatedAt: timeUtil.Format(data.User.UpdatedAt),
 	}
 
-	res := map[string]interface{}{
+	return map[string]interface{}{
 		"user": user,
 	}
-	response.Success(c, res)
 }
-
